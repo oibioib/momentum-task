@@ -1,0 +1,39 @@
+.slider {
+  &__icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    background-size: 3.2rem 3.2rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    cursor: pointer;
+
+    &:hover {
+      animation: scale-btn 1s ease-in-out infinite;
+    }
+
+    &_prev {
+      left: 20px;
+      background-image: url("../assets/svg/slider-prev.svg");
+    }
+
+    &_next {
+      right: 20px;
+      background-image: url("../assets/svg/slider-next.svg");
+    }
+  }
+}
+
+@keyframes scale-btn {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

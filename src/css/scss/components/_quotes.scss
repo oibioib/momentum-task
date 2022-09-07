@@ -1,0 +1,58 @@
+.quotes {
+  width: 100%;
+  &__change-btn {
+    margin-bottom: 1rem;
+    background-image: url("../assets/svg/reload.svg");
+    transition: all 0.3s linear;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 2rem;
+    }
+  
+    @media screen and (max-width: 390px) {
+      margin-bottom: 3rem;
+    }
+
+  }
+
+  &__text {
+    // min-height: 3.2rem;
+    letter-spacing: 0.1rem;
+    max-width: 70%;
+    margin: 0 auto 0.8rem;
+
+    &::before {
+      content: "\"";
+    }
+
+    &::after {
+      content: "\"";
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
+    
+    @media screen and (max-width: 390px) {
+      font-size: 3rem;
+    }
+  }
+  
+  &__author {
+    min-height: 20px;
+    opacity: 0.7;
+    font-size: smaller;
+    letter-spacing: 0.1rem;
+    margin: 0 auto 0.8rem;
+    
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
+    
+    @media screen and (max-width: 390px) {
+      font-size: 3rem;
+    }
+  }
+
+  
+}

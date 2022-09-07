@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+
+  @media (max-width: 768px) {
+    font-size: 8px;
+  }
+
+  @media (max-width: 560px) {
+    font-size: 6px;
+  }
+
+  @media (max-width: 390px) {
+    font-size: 4px;
+  }
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: $font;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  background-position: center center;
+  background: linear-gradient(339deg, rgba(226, 166, 121, 1) 0%, rgba(77, 132, 171, 1) 100%);
+  background-blend-mode: multiply;
+  transition: background-image 1.2s ease-in-out;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 390px) {
+    font-size: 3rem;
+  }
+}
+
+a {
+  color: $switcher-color;
+  text-decoration: none;
+}
+
+.icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-size: 3.2rem 3.2rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    border: 0;
+    outline: 0;
+  }
+
+  &_rotate {
+    &:hover {
+      animation: rotate-btn 0.7s linear;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 4rem;
+    height: 4rem;
+    background-size: 4rem 4rem;
+  }
+
+  @media screen and (max-width: 390px) {
+    width: 6rem;
+    height: 6rem;
+    background-size: 6rem 6rem;
+  }
+}
+
+@keyframes rotate-btn {
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.module {
+  transition: opacity 0.5s ease;
+
+  &_hide {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+}
+
+.wrapper {
+  padding: 20px;
+
+  @media screen and (max-width: 768px) {
+    padding: 15px;
+  }
+
+  @media screen and (max-width: 390px) {
+    padding: 10px;
+  }
+}

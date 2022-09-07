@@ -1,0 +1,30 @@
+@import "~normalize.css";
+
+@import "./scss/vendors/owfont";
+
+@import "./scss/abstract/variables";
+
+@import "./scss/abstract/mixins";
+
+@import "./scss/base";
+
+@import "./scss/layout/main";
+@import "./scss/layout/header";
+@import "./scss/layout/footer";
+@import "./scss/layout/panel";
+@import "./scss/layout/modals";
+@import "./scss/layout/checkbox";
+
+
+@import "./scss/components/time";
+@import "./scss/components/date";
+@import "./scss/components/greeting";
+@import "./scss/components/slider";
+@import "./scss/components/weather";
+@import "./scss/components/quotes";
+@import "./scss/components/audio";
+@import "./scss/components/settings";
+@import "./scss/components/todo";
+
+
+@import "./scss/components/language";

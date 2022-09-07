@@ -1,0 +1,80 @@
+.settings {
+  display: flex;
+  align-items: center;
+  &__icon {
+    background-size: 4rem 4rem;
+    cursor: pointer;
+    background-image: url("../assets/svg/settings.svg");
+    margin-right: 1rem;
+
+    @media screen and (max-width: 768px) {
+      background-size: 5rem 5rem;
+    }
+
+    @media screen and (max-width: 390px) {
+      background-size: 7rem 7rem;
+    }
+  }
+  
+  &__inner {
+    display: flex;
+  }
+
+  &__block {
+    flex: 1 0 50%;
+
+    &-title {
+      background-color: rgba(0,0,0,0.07);;
+      display: block;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.85);
+      // letter-spacing: 0.05rem;
+
+    }
+
+    &-onoff {
+      padding-right: 10px;
+      border-right: 1px solid rgba(0,0,0,0.07);
+    }
+    
+    &-services {
+      padding-left: 10px;
+    }
+
+    &-tags {
+      margin-top: 10px;
+      margin-bottom: -5px;
+    }
+  }
+
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 2px;
+  cursor: pointer;
+
+  &:hover {
+    color: $switcher-color;
+    background-color: rgba(0,0,0,0.05);
+  }
+
+  &_between {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: 390px) {
+    padding: 3px;
+    font-size: 2.8rem;
+  }
+
+}

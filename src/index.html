@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="favicon.ico" rel="shortcut icon">
+  <title>Momentum</title>
+</head>
+
+<body>
+  <header class="header wrapper">
+    <div class="player module">
+      <div class="player__controls">
+        <button class="player__button_prev icon"></button>
+        <button class="player__button_play icon"></button>
+        <button class="player__button_next icon"></button>
+      </div>
+      <div class="player__current-track"></div>
+      <div class="player__timeline">
+        <div class="player__timeline-progress"></div>
+      </div>
+      <div class="player__block">
+        <span class="volume-ico"></span>
+        <div class="player__volume">
+          <div class="player__volume-level"></div>
+        </div>
+        <div class="player__time">
+          <div class="player__time-current"></div>
+          <div class="player__time">/</div>
+          <div class="player__time-full"></div>
+        </div>
+      </div>
+      <ul class="play__list"></ul>
+    </div>
+    <div class="weather module">
+      <input class="weather__city" type="text">
+      <i class="weather__icon owf"></i>
+      <div class="weather__error"></div>
+      <div class="weather__info">
+        <span class="weather__temperature"></span>
+        <span class="weather__description"></span>
+      </div>
+      <div class="weather__wind"></div>
+      <div class="weather__humidity"></div>
+    </div>
+  </header>
+  <main class="main wrapper">
+    <div class="slider module">
+      <button class="slider__icon slider__icon_prev icon"></button>
+      <button class="slider__icon slider__icon_next icon"></button>
+    </div>
+    <time class="time module"></time>
+    <date class="date module"></date>
+    <div class="greeting module">
+      <span class="greeting__text"></span>
+      <input class="greeting__name" type="text" placeholder="[Enter name]">
+    </div>
+  </main>
+  <footer class="footer wrapper">
+    <div class="quotes module">
+      <button class="quotes__change-btn icon icon_rotate"></button>
+      <div>
+        <div class="quotes__text"></div>
+        <div class="quotes__author"></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-left">
+        <div class="settings module">
+          <button class="settings__icon icon icon_rotate"></button>
+        </div>
+        <div class="language module">
+          <input class="language__checkbox" id="language-checkbox" type="checkbox">
+          <label class="language__checkbox-label" for="language-checkbox"><span></span></label>
+        </div>
+      </div>
+      <div class="panel-links module">
+        <a href="https://github.com/oibioib" target="_blank" rel="noopener noreferrer">
+          <span class="panel__link link-github"></span>
+        </a>
+        <a href="https://rs.school/js/" target="_blank" rel="noopener noreferrer">
+          <span class="panel__link link-rsschool"></span>
+        </a>
+      </div>
+      <div class="panel-right">
+        <div class="todo todo__module module">
+          <button class="todo__button">Todo</button>
+          <div class="todo__num">
+            <span>0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <section class="modals">
+    <div class="modals__overlay"></div>
+    <div class="settings-modal modal">
+      <div class="modal__head">
+        <span class="modal__title">Settings</span>
+        <span class="modal__close"></span>
+      </div>
+      <div class="settings__inner">
+        <div class="settings__block settings__block-onoff">
+          <span class="settings__block-title settings-block-title">Bloks</span>
+          <label class="setting setting_between block-audio onoff"><span class="setting__title"></span><input class="setting__chceckbox" type="checkbox" data-option="audio">
+            <div></div>
+          </label>
+          <label class="setting setting_between block-weather onoff"><span class="setting__title"></span><input class="setting__chceckbox" type="checkbox" data-option="weather">
+            <div></div>
+          </label>
+          <label class="setting setting_between block-date onoff"><span class="setting__title"></span><input class="setting__chceckbox" type="checkbox" data-option="date">
+            <div></div>
+          </label>
+          <label class="setting setting_between block-time onoff"><span class="setting__title"></span><input class="setting__chceckbox" type="checkbox" data-option="time">
+            <div></div>
+          </label>
+          <label class="setting setting_between block-greeting onoff"><span class="setting__title"></span><input class="setting__chceckbox" type="checkbox" data-option="greeting">
+            <div></div>
+          </label>
+          <label class="setting setting_between block-quotes onoff"><span class="setting__title"></span><input class="setting__chceckbox" type="checkbox" data-option="quotes">
+            <div></div>
+          </label>
+          <label class="setting setting_between block-todo onoff"><span class="setting__title"></span><input class="setting__chceckbox" type="checkbox" data-option="todo">
+            <div></div>
+          </label>
+          <label class="setting setting_between block-links onoff"><span class="setting__title"></span><input class="setting__chceckbox" type="checkbox" data-option="links">
+            <div></div>
+          </label>
+        </div>
+        <div class="settings__block settings__block-services">
+          <div class=" settings__block-images">
+            <span class="settings__block-title images-block-title">Image services</span>
+            <label class="setting setting_between block-github onoff"><span class="setting__title">GitHub</span><input class="images__chceckbox" type="checkbox" data-option="github">
+              <div></div>
+            </label>
+            <label class="setting setting_between block-unsplash onoff"><span class="setting__title">Unsplash</span><input class="images__chceckbox" type="checkbox" data-option="unsplash">
+              <div></div>
+            </label>
+            <label class="setting setting_between block-flickr onoff"><span class="setting__title">Flickr</span><input class="images__chceckbox" type="checkbox" data-option="flickr">
+              <div></div>
+            </label>
+          </div>
+          <div class="settings__block-tags">
+            <span class="settings__block-title tags-block-title">Tags</span>
+            <label class="setting setting_between tag-new onoff"><span class="setting__title"></span><input class="tags__chceckbox" type="checkbox" data-option="new">
+              <div></div>
+            </label>
+            <label class="setting setting_between tag-iceland onoff"><span class="setting__title"></span><input class="tags__chceckbox" type="checkbox" data-option="iceland">
+              <div></div>
+            </label>
+            <label class="setting setting_between tag-water onoff"><span class="setting__title"></span><input class="tags__chceckbox" type="checkbox" data-option="water">
+              <div></div>
+            </label>
+            <label class="setting setting_between tag-summer onoff"><span class="setting__title"></span><input class="tags__chceckbox" type="checkbox" data-option="summer">
+              <div></div>
+            </label>
+            <label class="setting setting_between tag-bw onoff"><span class="setting__title"></span><input class="tags__chceckbox" type="checkbox" data-option="bw">
+              <div></div>
+            </label>
+            <label class="setting setting_between tag-nature onoff"><span class="setting__title"></span><input class="tags__chceckbox" type="checkbox" data-option="nature">
+              <div></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="todo todo-modal modal">
+      <div class="modal__head">
+        <span class="modal__title">Todo</span>
+        <span class="modal__close"></span>
+      </div>
+      <form class="todo__head" action="#" id="todoform">
+        <input class="todo__input" type="text" name="todoinput" required>
+        <button class="todo__submit" type="submit" name="todosubmit"></button>
+      </form>
+      <div class="todo__list"></div>
+      <div class="todo__summary hide">
+        <span class="todo__completed"></span>
+        <a class="todo__clear-all" href="#">Clear</a>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

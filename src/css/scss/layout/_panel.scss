@@ -1,0 +1,52 @@
+.panel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  & > * {
+    display: flex;
+    flex: 1 0 1px;
+    align-items:center;
+  }
+
+  &-left {
+    justify-content: left;
+  }
+
+  &-right {
+    justify-content: right;
+  }
+
+  &-links {
+    justify-content: center;
+  }
+  
+  &__link {
+    display: block;
+    background-size: cover;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.link {
+  &-github {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url("../assets/svg/github.svg") center center no-repeat;
+    background-size: 2.5rem 2.5rem;
+  }
+  
+  &-rsschool {
+    width: 9rem;
+    height: 2.5rem;
+    background: url("../assets/svg/rsschooljs.svg") center center no-repeat;
+  }
+}

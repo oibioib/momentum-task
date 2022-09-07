@@ -1,0 +1,210 @@
+.todo {
+  &__module {
+    display: flex;
+  }
+
+  &__button {
+    display: flex;
+    background: transparent;
+    align-items: center;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::before {
+      content: "";
+      width: 1.8rem;
+      height: 1.8rem;
+      margin-right: 0.5rem;
+      background-image: url("../assets/svg/todo.svg");
+      background-size: 1.8rem 1.8rem;
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-color: transparent;
+
+      @media screen and (max-width: 768px) {
+        width: 3.4rem;
+        height: 3.4rem;
+        background-size: 3.2rem 3.2rem;
+      }
+
+      @media screen and (max-width: 390px) {
+        width: 4.6rem;
+        height: 4.6rem;
+        background-size: 4.6rem 4.6rem;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 3.4rem;
+    }
+
+    @media screen and (max-width: 390px) {
+      font-size: 4.6rem;
+    }
+  }
+
+  &__num {
+    content: "1";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -9px;
+    right: 5px;
+    padding: 5px;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    font-weight: 700;
+    background-color: $switcher-color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__head {
+    display: flex;
+  }
+
+  &__input {
+    flex: 1 0;
+    height: 4rem;
+    margin-right: 1.5rem;
+    padding: 0 1.5rem;
+    border: 0;
+    outline: 0;
+    border-radius: 0.4rem;
+    box-shadow: 0px 0px 0px 1px rgba(13, 96, 111, 0.2);
+    transition: all 0.3s ease;
+
+    &:focus,
+    &:hover {
+      box-shadow: 0px 0px 0px 1px rgba(13, 96, 111, 0.2), 0px 0px 0px 4px rgba(13, 96, 111, 0.2);
+    }
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+  }
+
+  &__submit {
+    border: 0;
+    outline: 0;
+    padding: 0 15px;
+    background-color: $switcher-color;
+    border-radius: 5px;
+    color: #fff;
+    transition: opacity 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__list {
+    max-height: 50vh;
+    overflow-y: auto;
+    margin-top: 15px;
+  }
+  &__item {
+    // background-color: #ddd;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.03);
+    margin-top: 3px;
+    color: rgba(0, 0, 0, 0.85);
+
+    &:hover {
+      background: rgba($switcher-color, 0.15);
+    }
+  }
+
+  &__complete {
+    margin-right: 10px;
+    cursor: pointer;
+
+    &:checked ~ p {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+  }
+
+  &__text {
+    flex: 1 0;
+    hyphens: auto;
+    overflow: hidden;
+  }
+
+  &__clear {
+    border: 0;
+    outline: 0;
+    width: 20px;
+    height: 20px;
+    background: url("../assets/svg/trashbin.svg") center center no-repeat;
+    background-size: 15px 15px;
+    opacity: 0.7;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+      background: url("../assets/svg/trashbin-orange.svg") center center no-repeat;
+      background-size: 15px 15px;
+    }
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 5px 10px;
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  &__completed {
+    color: rgba(0,0,0, 0.7);
+  }
+
+  &__clear-all {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 0px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-bottom: 1px dotted $switcher-color;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      opacity: 0.9;
+
+      &::after {
+        border-bottom: 1px dotted transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+$checkbox-color-dark: rgb(70, 70, 70);
+$checkbox-color-light: rgb(255, 255, 255);
+// $checkbox-color-bg: rgb(63, 84, 94);
+
+.language {
+  position: relative;
+  width: 9rem;
+  height: 4rem;
+
+  @media screen and (max-width: 768px) {
+    width: 12rem;
+    height: 5rem;
+  }
+
+  @media screen and (max-width: 390px) {
+    width: 17rem;
+    height: 9rem;
+  }
+
+  &__checkbox {
+    visibility: hidden;
+
+    &:checked ~ &-label {
+      span {
+        transform: translate3d(100%, 0, 0);
+      }
+
+      &::before {
+        color: $checkbox-color-dark;
+      }
+
+      &::after {
+        color: $checkbox-color-light;
+      }
+    }
+
+    &-label {
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: $checkbox-color-light;
+      font-weight: 600;
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+
+        span {
+          background-color: rgba($switcher-color, 0.9);
+        }
+      }
+
+      &::before,
+      &::after {
+        z-index: 1;
+        transition: all 0.5s ease-out;
+      }
+
+      &::before {
+        content: "EN";
+        margin: 2px 0 0 1px;
+      }
+
+      &::after {
+        content: "RU";
+        margin: 2px 0 0 6px;
+        color: $checkbox-color-dark;
+      }
+
+      span {
+        position: absolute;
+        // top: calc(100% + 15px);
+        left: 5px;
+        width: calc(50% - 5px);
+        height: calc(100% - 10px);
+        content: "";
+        border-radius: 5px;
+        background-color: $switcher-color;
+        transition: transform 0.2s;
+        // box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 8px rgba(0, 0, 0, 0.4);
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: 390px) {
+        font-size: 3rem;
+      }
+    }
+  }
+}
